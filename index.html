@@ -1,28 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ePARK app landing page</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div style="margin: auto; width: 50%; padding: 10px; text-align: center;">
-        <h1>e-park by Q-Park</h1>
-        <a href="https://apps.apple.com/dk/app/e-park-by-q-park/id1470200898">IOS app store</a>
-        <br>
-        <a href="http://play.google.com/store/apps/details?id=org.nativescript.qpepark">Google play store</a>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
-            if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
-                window.location.href = 'https://play.google.com/store/apps/details?id=org.nativescript.qpepark';
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>e-park by Q-Park</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            .q-park {
+                width: 20%;
+                margin: 1%;
             }
-            if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
-                window.location.href = 'https://apps.apple.com/dk/app/e-park-by-q-park/id1470200898';
+            .store-link {
+                width: 50%;
             }
-        });
+            @media screen and (max-width: 900px) {
+                .store-link {
+                    width: 80%;
+                }
+                .q-park {
+                width: 50%;
+                margin: 1%;
+            }
+            }
+            @media screen and (max-width: 600px) {
+                .store-link {
+                    width: 100%;
+                }
+                .q-park {
+                    width: 80%;
+                    margin-top: 2%;
+                }
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+        </style>
+        <div style="margin: auto; width: 50%; padding: 10px; text-align: center; font-family: 'Nunito', sans-serif;">
+            <img class="store-link" src="assets/epark_logo.png" alt="logo">
+            <h1>e-park by Q-Park</h1>
+            <br>
+            <a href="https://apps.apple.com/dk/app/e-park-by-q-park/id1470200898">
+                <img class="store-link" src="assets/download-on-the-app-store.svg">
+            </a>
+            <br>
+            <br>
+            <a href="http://play.google.com/store/apps/details?id=org.nativescript.qpepark">
+                <img class="store-link" src="assets/google-play-badge.png">
+            </a>
+        </div>
+        <div class="footer">
+            <img class="q-park" src="assets/qpark_logo.svg" alt="">
+        </div>
+        <script>
+            // document.addEventListener("DOMContentLoaded", function(event) { 
+            //     if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
+            //         window.location.href = 'https://play.google.com/store/apps/details?id=org.nativescript.qpepark';
+            //     }
+            //     if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
+            //         window.location.href = 'https://apps.apple.com/dk/app/e-park-by-q-park/id1470200898';
+            //     }
+            // });
         </script>
     </body>
 </html>
